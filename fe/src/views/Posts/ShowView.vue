@@ -17,7 +17,7 @@ function formatTimeAgo(date) {
     const now = new Date();
     const postDate = new Date(date);
     const diff = now - postDate;
-    const diffDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const diffDays = Math. floor(diff / (1000 * 60 * 60 * 24));
     if (diffDays === 0) return 'Today';
     return `${diffDays} days ago`;
 }
@@ -29,7 +29,7 @@ function formatTimeAgo(date) {
         <h1 class="title">{{ post.title }}</h1>
         
 
-        <p class="text-xs text-slate-600">
+    <p class="text-xs text-slate-600">
             Posted by <strong>{{ post.user.name }}</strong> on 
             <strong v-if="(new Date() - new Date(post.created_at)) / (1000 * 60 * 60 * 24) <= 3">
                 {{ formatTimeAgo(post.created_at) }}

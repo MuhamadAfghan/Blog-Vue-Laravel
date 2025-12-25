@@ -16,11 +16,11 @@ onMounted(() => errors.value = {})
 </script>
 
 <template>
-  <main>
+  <main> 
     <h1 class="title">Login to your account</h1>
 
     <form action="" class="w-1/2 mx-auto space-y-6" @submit.prevent="authenticate('login', formData)"> 
-
+ 
         <div>
             <input type="email" placeholder="Email" v-model="formData.email">
             <div v-if="errors.email">

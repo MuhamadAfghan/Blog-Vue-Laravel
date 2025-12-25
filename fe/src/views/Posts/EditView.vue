@@ -20,7 +20,7 @@ const formData = reactive({
 const post = ref(null);
 
 onMounted(async () => {
-  post.value = await getPost(postId); 
+  post.value = await gFetPost(postId); 
 
   if (post.user_id !== user.id) {
     router.push({ name: 'home' });
